@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=1">
+
+	<title>Дипломный проект</title>
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	
+	<!-- FAVICON -->
+
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"><link rel="manifest" href="img/favicon/site.webmanifest"><meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/header.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/footer.css">
+	<link rel="stylesheet" href="styles/popup.css">
+</head>
+
+<body class = "js-padding-lock">
+	
+	<!-- Sprite SVG-->
+	<svg style = "display: none;">
+		<symbol id="next-arrow" viewBox="0 0 512.002 512.002">
+			<g>
+				<path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+				L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+				l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"/>
+			</g>
+		</symbol>
+	
+
+		<symbol id = "previous-arrow" viewBox="0 0 443.52 443.52">
+			<g>
+				<path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8
+				c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712
+				L143.492,221.863z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<header class= "header js-header no-js js-padding-lock">
+		<div class= "fixed-container header__flex">
+			<nav class= "menu header__menu">
+				<button class="menu__btn js-menu__btn" aria-label= "Иконка меню">
+					<span class="menu__btn-elem"></span>
+					<span class="menu__btn-elem"></span>
+					<span class="menu__btn-elem"></span>
+				</button>
+
+				<div class="menu__body js-menu__body no-js">
+				<ul class= "menu__list menu__list-header">
+					<li class= "menu__item">
+						<a class="menu__link" href="#js-services">Услуги</a>
+					</li>
+					<li class= "menu__item">
+						<a class="menu__link" href="#js-portfolio">Портфолио</a>
+					</li>
+					<li class= "menu__item">
+						<a class="menu__link" href="#js-price">Стоимость</a>
+					</li>
+				</ul>
+				</div>
+			</nav>
+
+
+			<div class= "header__contatcts">
+				<a class= "header__tel" href= "tel:+74999955577">+7 (499) 995-55-77</a>
+
+				<button type= "button" class= "btn header__btn js-btn" aria-label= "Заказать звонок">Заказать звонок</button>
+			</div>
+		</div>
+	</header>
+	
+	<main class= "main">
+		<section class= "section-intro js-section-intro no-js">
+			<div class="fixed-container section-intro__flex">
+				<div class="section-intro__text-content">
+					<div class="section-intro__text">
+						<h1 class= "section-intro__title">Дмитрий Алексеев 
+							<span class="section-intro__subtitle">Frontend-разработчик и веб-верстальщик</span>
+						</h1>
+
+						<button class="section-btn js-btn">Узнать больше</button>
+					</div>
+				</div>
+
+				<div class="section-intro__photo-content"> 
+					<div class="section-intro__photo">
+						<picture>
+							<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/man@1x.webp 1x, img/mobile/man@2x.webp 2x">
+
+							<source media="(max-width: 992px)" type="image/webp" srcset="img/tablet/man@1x.webp 1x, img/tablet/man@2x.webp 2x">
+
+							<source type="image/webp" srcset="img/desktop/man@1x.webp 1x, img/desktop/man@2x.webp 2x">
+
+							<source media="(max-width: 375px)"  srcset="img/mobile/man@1x.png 1x, img/mobile/man@2x.png 2x">
+
+							<source media="(max-width: 992px)" srcset="img/tablet/man@1x.png 1x, img/tablet/man@2x.png 2x">	
+
+							<img class="section-intro__photo-img" src= "img/desktop/man@1x.png" srcset="img/desktop/man@2x.png 2x" alt="Фото Дмитрия Алексеева">
+						</picture>
+					</div>
+				</div>
+
+				<div class="section-intro__tag-content">
+					<div class="text-tag  intro-text-tag1 tag-zero js-tag">{&nbsp;}</div>
+
+					<div class="text-tag intro-text-tag2 tag-zero js-tag">&lt;div&gt;</div>
+
+					<div class="text-tag intro-text-tag3 tag-zero js-tag">#</div>
+
+					<div class="text-tag intro-text-tag4 tag-zero js-tag">&lt;div&gt;</div>
+
+					<div class="text-tag intro-text-tag5 tag-zero js-tag">&lt;/&gt;</div>
+
+					<div class="text-tag intro-text-tag6 tag-zero js-tag">&lt;/&gt;</div>
+				</div>
+			</div>	
+		</section>
+
+		 <section class= "section-features" id="js-services">
+			<div class= "fixed-container section-features__flex">
+				<h2 class= "title-section section-features__title">Что я делаю</h2>
+				
+				<ul class = "section-features__list">
+					<li class= "section-features__item">
+						<picture>
+							<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/tools-and-utensils@1x.webp 1x, img/mobile/tools-and-utensils@2x.webp 2x">
+
+							<source type="image/webp" srcset="img/desktop/tools-and-utensils@1x.webp 1x, img/desktop/tools-and-utensils@2x.webp 2x">
+
+							<source media= "(max-width: 375px)" srcset= "img/mobile/tools-and-utensils@1x.png 1x, img/mobile/tools-and-utensils@2x.png 2x">
+
+							<img class= "section-features__img" src="img/desktop/tools-and-utensils@1x.png" srcset="img/desktop/tools-and-utensils@2x.png 2x" alt="Вёрстка  сайтов любой сложности">
+						</picture>
+
+						<h3 class= "describe-text section-features__text">
+							Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности
+						</h3>
+					</li>	
+
+					<li class= "section-features__item">
+						<picture>
+							<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/responsive@1x.webp 1x, img/mobile/responsive@2x.webp 2x">
+							
+							<source type="image/webp" srcset="img/desktop/responsive@1x.webp 1x, img/desktop/responsive@2x.webp 2x">
+
+							<source media= "(max-width: 375px)" srcset= "img/mobile/responsive@1x.png 1x, img/mobile/responsive@2x.png 2x">
+
+							<img class= "section-features__img" src="img/desktop/responsive.png" srcset="img/desktop/responsive@2x.png 2x" alt="Адаптивная вёрстка">
+						</picture>
+
+						
+						<h3 class= "describe-text section-features__text">
+							Адаптивная вёрстка под все браузеры и&nbsp;устройства
+						</h3>	
+					</li>
+
+					<li class= "section-features__item">
+						<picture>
+							<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/programming@1x.webp 1x, img/mobile/programming@2x.webp 2x">
+							
+							<source type="image/webp" srcset="img/desktop/programming@1x.webp 1x, img/desktop/programming@2x.webp 2x">
+
+							<source media= "(max-width: 375px)" srcset= "img/mobile/programming@1x.png 1x, img/mobile/programming@2x.png 2x">
+
+							<img class= "section-features__img" src="img/desktop/programming@1x.png" srcset="img/desktop/programming@2x.png 2x"  alt="Frontend–разработка">
+						</picture>
+
+						<h3 class= "describe-text section-features__text">
+							Frontend&mdash;разработка и&nbsp;программирование
+						</h3>	
+					</li>
+
+					<li class= "section-features__item">
+						<picture>
+							<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/coding@1x.webp 1x, img/mobile/coding@2x.webp 2x">
+							
+							<source type="image/webp" srcset="img/desktop/coding@1x.webp 1x, img/desktop/coding@2x.webp 2x">
+
+							<source media= "(max-width: 375px)" srcset= "img/mobile/coding@1x.png 1x, img/mobile/coding@2x.png 2x">
+
+							<img class= "section-features__img" src="img/desktop/coding@1x.png" srcset="img/desktop/coding@2x.png 2x" alt="Исправление существующей вёрстки">
+						</picture>
+
+						<h3 class= "describe-text section-features__text">
+							Исправление и&nbsp;доработка существующей вёрстки
+						</h3>	
+					</li>
+				</ul> <!-- section-features__list -->
+
+				<button class= "section-btn js-btn">Узнать стоимость</button>
+			</div>
+		</section> 
+ 
+		<section class="section-example" id = "js-portfolio">
+			<div class= "fixed-container section-example__flex">
+				<h2 class= "title-section section-example__title">
+				Пpимеры моих работ</h2>
+
+				<div class="slider section-example__slider">
+					<div class="slider__wrapper">
+						<article class= "slider__item">
+							<a href="#">
+								<picture>
+									<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/example1@1x.webp 1x, img/mobile/example1@2x.webp 2x">
+
+									<source media="(max-width: 1240px)" type="image/webp" srcset="img/tablet/example1@1x.webp 1x, img/tablet/example1@2x.webp 2x">
+
+									<source type="image/webp" srcset="img/desktop/example1@1x.webp 1x, img/desktop/example1@2x.webp 2x">
+
+									<source media="(max-width: 375px)"  srcset="img/mobile/example1@1x.jpg 1x, img/mobile/example1@2x.jpg 2x">
+
+									<source media="(max-width: 1240px)" srcset="img/tablet/example1@1x.jpg 1x, img/tablet/example1@2x.jpg 2x">	
+									
+									<img class="slider__img" src= "img/desktop/example1@1x.jpg" srcset="img/desktop/example1@2x.jpg 2x" alt="Сайт психолога Веры Антоновой">
+								</picture>
+							</a>
+
+							<h3 class= "describe-text slider__text">
+								Сайт психолога Веры Антоновой
+							</h3>	
+						</article>
+
+						<article class= "slider__item">
+							<a href="#">
+								<picture>
+									<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/example2@1x.webp 1x, img/mobile/example2@2x.webp 2x">
+
+									<source media="(max-width: 1240px)" type="image/webp" srcset="img/tablet/example2@1x.webp 1x, img/tablet/example2@2x.webp 2x">
+
+									<source type="image/webp" srcset="img/desktop/example2@1x.webp 1x, img/desktop/example2@2x.webp 2x">
+
+									<source media="(max-width: 375px)"  srcset="img/mobile/example2@1x.jpg 1x, img/mobile/example2@2x.jpg 2x">
+
+									<source media="(max-width: 1240px)" srcset="img/tablet/example2@1x.jpg 1x, img/tablet/example2@2x.jpg 2x">	
+									
+									<img class="slider__img" src= "img/desktop/example2@1x.jpg" srcset="img/desktop/example2@2x.jpg 2x" alt="Сайт магазина детской одежды">
+								</picture>
+							</a>
+
+							<h3 class= "describe-text slider__text">
+								Сайт магазина детской одежды
+							</h3>	
+						</article>
+
+						<article class= "slider__item">
+							<a href="#">
+								<picture>
+									<source media="(max-width: 375px)" type="image/webp" srcset="img/mobile/example3@1x.webp 1x, img/mobile/example3@2x.webp 2x">
+
+									<source media="(max-width: 1240px)" type="image/webp" srcset="img/tablet/example3@1x.webp 1x, img/tablet/example3@2x.webp 2x">
+
+									<source type="image/webp" srcset="img/desktop/example3@1x.webp 1x, img/desktop/example3@2x.webp 2x">
+
+									<source media="(max-width: 375px)"  srcset="img/mobile/example3@1x.jpg 1x, img/mobile/example3@2x.jpg 2x">
+
+									<source media="(max-width: 1240px)" srcset="img/tablet/example3@1x.jpg 1x, img/tablet/example3@2x.jpg 2x">	
+									
+									<img class="slider__img" src= "img/desktop/example3@1x.jpg" srcset="img/desktop/example3@2x.jpg 2x" alt="Сайт магазина «Рыболов»">
+								</picture>
+							</a>
+
+							<h3 class= "describe-text slider__text">
+								Сайт магазина «Рыболов»
+							</h3>	
+						</article>
+					</div>		
+				</div>  <!-- section-example__slider -->
+
+				<button class= "slider__previous-arrow " type= "button" aria-label ="Предыдущий слайд">
+					<svg class="slider__previous-arrow-img">
+						<use xlink:href="#previous-arrow"></use>
+					</svg>
+				</button>
+
+				<button class= "slider__next-arrow" type= "button" aria-label= "Следущий слайд">
+					<svg class="slider__next-arrow-img">
+						<use xlink:href="#next-arrow"></use>
+					</svg>
+				</button>
+
+				<div class="slider__pagination paginator" aria-hidden="true"></div>
+
+				<button class= "section-btn js-btn">Заказать проект</button>
+			</div>
+		</section>
+
+		<section class= "section-price" id= "js-price">
+			<div class= "fixed-container section-price__flex">
+				<div class="text-tag text-tag_white price-text-tag1 tag-zero js-tag">{&nbsp;}</div>
+
+				<div class="text-tag text-tag_white price-text-tag2 tag-zero js-tag">&lt;/&gt;</div>
+
+				<div class="text-tag text-tag_white price-text-tag3 tag-zero js-tag">#</div>
+
+				<div class="text-tag text-tag_white price-text-tag4 tag-zero js-tag">{&nbsp;}</div>
+
+				<div class="text-tag text-tag_white price-text-tag5  tag-zero js-tag">&lt;div&gt;</div>
+
+				<h2 class= "section-price__title">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h2>
+
+				<p class= "section-price__decribe">
+					* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
+				</p>
+			</div>
+		</section>
+	</main>	
+	
+	<footer class= "footer">
+		<div class= "fixed-container footer__flex">
+			<nav class= "menu footer__menu">
+				<ul class= "menu__list footer__menu-list">
+					<li class= "menu__item footer__menu-item">
+						<a href="#js-services" class= "menu__link footer__menu-link">Услуги</a>
+					</li>
+
+					<li class= "menu__item footer__menu-item">
+						<a href="#js-portfolio" class= "menu__link footer__menu-link">Портфолио</a>
+					</li>
+
+					<li class= "menu__item footer__menu-item">
+						<a href="#js-price" class= "menu__link footer__menu-link">Стоимость</a>
+					</li>
+				</ul>
+			</nav>
+
+			<address class= "footer__address">
+				<a href= "tel:+74999957755" class= "footer__tel footer__address-link">
+					<i class= "fa fa-phone fa-address" aria-hidden= "true"></i>+7 (499) 995-77-55
+				</a>
+
+				<a href= "mailto:dmitry@alekseev.com" class= "footer__emal footer__address-link">
+					<i class="fa fa-envelope fa-address" aria-hidden="true"></i>dmitry@alekseev.com
+				</a>
+			</address>
+
+				<div class="footer__contacts">
+					<button class="btn btn_long js-btn">Заказать звонок</button>
+
+					<ul class= "footer__social-network-list">
+						<li class= "footer__social-item">
+							<a href="https://vk.com/" class= "sprite icon-vk" aria-label ="Перейти в vk" target="_blank"></a>
+						</li>
+						
+						<li class= "footer__social-item">
+							<a href="https://www.facebook.com/" class= "sprite icon-fc" aria-label ="Перейти в Facebook" target="_blank"></a>
+						</li>
+						
+						<li class= "footer__social-item">
+							<a href="https://twitter.com/" class= "sprite icon-tw" aria-label ="Перейти в Twitter" target="_blank"></a>
+						</li>
+						
+						<li class= "footer__social-item">
+							<a href="https://www.instagram.com/" class= "sprite icon-inst" aria-label= "Перейти в Instagram" target="_blank"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer__copyright">
+				<p class= "footer__copyright-text">&#169; Дмитрий Алексеев, 2016 – 2018</p>
+			</div>
+	</footer>
+
+	<div class="popup js-popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<button class="popup__close-btn section-btn js-popup__close-btn"  aria-label= "Закрыть форму">
+					<i class="fa fa-times close" aria-hidden="true"></i>
+				</button>
+
+				<h2 class="popup__title">Форма обратной связи</h2>
+				<form method= "post" action= "#" enctype= "application/x-www-form-urlencoded" class="form popup__form js-popup__form">
+					
+					<label class="form__label" for = "personName">* Имя</label>
+
+					<div class="input-content">
+						<input type= "text" name= "personName" class="form__text js-form__text" id = "personName">
+
+						<label id = "personName-error" class = "error form__label-error js-form__label-error" for = "personName"></label>
+					</div>
+
+					<label class="form__label" for = "personPhone">* Телефон</label>
+
+					<div class="input-content">
+						<input type= "tel" name= "personPhone"  class="form__text js-form__text" id = "personPhone">
+
+						<label id = "personPhone-error" class = "error form__label-error js-form__label-error" for = "personPhone"></label>
+					</div>
+					
+					<label class="form__label" for = "personEmail">* Почта</label>
+
+					<div class="input-content">
+						<input type= "email" name= "personEmail"  class="form__text js-form__text" id = "personEmail">
+
+						<label id = "personEmail-error" class = "error form__label-error js-form__label-error" for = "personEmail"></label>
+					</div>
+
+					<button type = "submit" class="btn form__btn js-submit-btn">Заказать звонок</button>		
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts/jquery-3.4.1.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="scripts/jquery.inputmask.min.js"></script>
+	<script src="scripts/jquery.validate.min.js"></script>
+	
+	<script src="scripts/slider.js" defer></script>
+	<script src="scripts/script.js"></script>	
+</body>
+</html>

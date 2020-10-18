@@ -1,0 +1,428 @@
+/*Header*/
+
+.btn
+{
+    font-size: 16px;
+
+    padding: 12px 40px;
+
+    cursor: pointer;
+    transition: color .5s ease 0s,
+    background-color .5s ease 0s;
+
+    color: #fc557c;
+    border: 1px solid #fc557c;
+    background-color: transparent;
+}
+
+.btn_long
+{
+    width: 245px;
+}
+
+.btn:hover,
+.btn:focus
+{
+    color: #fff;
+    background-color: #fc557c;
+}
+
+.btn:focus
+{
+    outline: none;
+}
+
+.header
+{
+    position: fixed;
+    z-index: 5;
+    left: 50%;
+
+    width: 100%;
+
+    transform: translate(-50%, 0);
+
+    background-color: #fbfbfb;
+}
+
+.header.no-js
+{
+    position: absolute;
+}
+
+.header.active
+{
+    position: fixed;
+}
+
+
+.header__flex
+{
+    display: -moz-flex;
+    display:  -ms-flex;
+    display:   -o-flex;
+    display:      flex;
+
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    justify-content: space-between;
+}
+
+/*MENU*/
+
+.menu__btn
+{
+    display: none;
+}
+
+.menu
+{
+    display: -moz-flex;
+    display:  -ms-flex;
+    display:   -o-flex;
+    display:      flex;
+
+    align-items: center;
+}
+
+.menu__list
+{
+    display: -moz-flex;
+    display:  -ms-flex;
+    display:   -o-flex;
+    display:      flex;
+
+    margin: 0;
+    padding-left: 0;
+
+    list-style-type: none;
+}
+
+.menu__item
+{
+    margin-right: 30px;
+}
+
+.menu__item:last-child
+{
+    margin-right: 0;
+}
+
+.menu__link
+{
+    font-size: 16px;
+
+    transition: color .5s ease 0s;
+}
+.menu__link::after /*полса у ссылки*/
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 1.5px;
+
+    content: ' ';
+    transition: width .5s ease 0s;
+
+    background-color: #fc557c;
+}
+
+
+.menu__link:hover:after
+{
+    width: 100%;
+}
+
+
+.menu__link:hover,
+.menu__link:focus
+{
+    color: #fc557c;
+}
+
+.menu__link:focus
+{
+    outline: none;
+}
+
+
+/*CONTACTS*/
+
+.header__contatcts
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.header__tel
+{
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-right: 20px;
+}
+
+@media(max-width: 1240px)
+{
+    .header__flex
+    {
+        position: relative;
+
+        justify-content: flex-end;
+    }
+
+    /*MENU*/
+    .menu__btn
+    {
+        position: absolute;
+        z-index: 10;
+        top: 35px;
+        left: 20px;
+
+        display: block;
+
+        width: 45px;
+        height: 27px;
+
+        border: none;
+        background-color: transparent;
+    }
+
+    .menu__btn:hover,
+    .menu__btn:focus
+    {
+        outline: none;
+    }
+
+    .menu__btn-elem
+    {
+        position: absolute;
+        top: 14px;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 7px;
+
+        transition: transform .5s ease 0s,
+        background-color .5s ease 0s,
+        top .5s ease 0s;
+
+        background: linear-gradient(45deg, rgba(255,143,90,1) 20%, rgba(250, 9, 143, 1) 100%);
+    }
+
+    .menu__btn-elem:first-child
+    {
+        top: 0;
+
+        background: linear-gradient(45deg, rgba(255,143,90,1) 0%, rgba(250, 9, 143, 1) 70%);
+    }
+    .menu__btn-elem:last-child
+    {
+        top: 100%;
+
+        background: linear-gradient(45deg, rgba(255,143,90,1) 50%, rgba(250, 9, 143, 1) 100%);
+    }
+
+    .menu__btn.active .menu__btn-elem
+    {
+        transform: scale(0);
+
+        background-color: #fff;
+    }
+    .menu__btn.active .menu__btn-elem:first-child
+    {
+        top: 12px;
+
+        transform: rotate(-35deg);
+    }
+    .menu__btn.active .menu__btn-elem:last-child
+    {
+        top: 12px;
+
+        transform: rotate(35deg);
+    }
+
+    .menu__body
+    {
+        position: absolute;
+        z-index: 0;
+        top: 80px;
+        left: 0;
+
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        width: 100%;
+
+        transition: transform .5s ease 0s;
+        transform: translate(0, -200%);   /*скрыли меню*/
+
+        background-color: #fbfbfb;
+    }
+
+    .menu__body.no-js
+    {
+        position: absolute;
+
+        transform: translate(0, 0);
+    }
+
+    .menu__body.active
+    {
+        transform: translate(0, 0);
+    }
+
+
+    .menu__list
+    {
+        flex-direction: column;
+    }
+
+    .menu__list-header
+    {
+        margin: 50px auto 50px;
+    }
+
+    .menu__item
+    {
+        margin: 15px auto;
+    }
+
+    .menu__item:first-child
+    {
+        margin-top: 0;
+    }
+
+    .menu__item:last-child
+    {
+        margin-right: auto;
+    }
+
+    .menu__link
+    {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    /*CONTACTS*/
+    /*    .header__contatcts{
+   padding-right: 20px;
+   }*/
+
+    .header__tel
+    {
+        margin-right: 45px;
+    }
+
+
+    .header__btn
+    {
+        font-size: 0;
+
+        width: 45px;
+        height: 45px;
+        padding: 0;
+
+        transition: background .5s ease 0s;
+
+        border: none;
+        background: url('../img/icons/big-phone.png') transparent;
+    }
+
+    .btn:hover,
+    .btn:focus
+    {
+        color: transparent;
+        background-color: transparent;
+    }
+
+    .header__btn:hover,
+    .header__btn:focus
+    {
+        background-image: url(../img/icons/big-phone-active.png);
+    }
+}
+
+@media (max-width: 576px)
+{
+    .header__flex
+    {
+        padding-top: 25px;
+    }
+
+    /*MENU*/
+
+    .menu__btn
+    {
+        top: 29px;
+        left: 20px;
+
+        width: 24px;
+        height: 15px;
+    }
+
+    .menu__btn-elem
+    {
+        top: 7px;
+
+        height: 3px;
+    }
+
+
+    .menu__btn.active .menu__btn-elem:first-child,
+    .menu__btn.active .menu__btn-elem:last-child
+    {
+        top: 9px;
+    }
+
+    .menu__body
+    {
+        top: 57px;
+    }
+
+    /*CONTACTS*/
+
+    .header__tel
+    {
+        font-size: 20px;
+
+        margin-right: 33px;
+    }
+
+    .header__btn
+    {
+        width: 26px;
+        height: 26px;
+
+        background: url('../img/icons/phone.png') transparent;
+    }
+
+
+    .header__btn:hover,
+    .header__btn:focus
+    {
+        background-image: url(../img/icons/phone-active.png);
+    }
+}
+
+@media (max-width: 375px)
+{
+    .menu__btn
+    {
+        left: 0;
+    }
+
+    .header__tel
+    {
+        font-size: 18px;
+    }
+}
