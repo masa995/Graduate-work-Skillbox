@@ -95,7 +95,7 @@
     flex-direction: column;
 }
 
-.input-content {
+.form__input-content {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column; 

@@ -13,7 +13,6 @@ $(document).ready(function(){
 	//переменные меню
 	const menuBody = $('.js-menu__body');
 	const menuBtn = $('.js-menu__btn');
-	let validator;
 	
 	//переменные popup
 	const popup = $('.js-popup');
@@ -21,6 +20,7 @@ $(document).ready(function(){
 	const popupContent = $('.popup__content')
 	const popupClose = $('.js-popup__close-btn');
 	const form = $('.js-popup__form');
+	const result = $('.js-label__result');
 
 	//удаление классов, которые работают если не работает js
 	menuBody.removeClass('no-js');
@@ -157,32 +157,19 @@ $(document).ready(function(){
 						}
 					},
 			submitHandler(form) {
+				result.text('Загрузка...');
 				let subForm = $(form);
 
 				$.ajax({
 				type: 'POST',
 				url: 'mail.php',
 				data: subForm.serialize(),
+				success: function(data){
+					result.html(data);
+					}
 				}).done(() => {
-
 					subForm.trigger('reset');
 				});
-
-			//после отправки формы закрываем формы
-			if(menuBody.hasClass('active')){ 		 	
-	 			popup.removeClass('active');
-	 			setTimeout(function (){
-	 			rebootForm(form);
-	 			}, 500);
-	 		}	
-
-	 		else {
-	 			unlock();
-	 			popup.removeClass('active');
-	 			setTimeout(function (){
-	 			rebootForm(form);
-	 			}, 500);
-	 		}
 
 				return false;
 				}
@@ -191,9 +178,10 @@ $(document).ready(function(){
 
  // очищает форму
 	function rebootForm (elem){
-		var validator = $(elem).validate();
+		let validator = $(elem).validate();
 		validator.resetForm();//удаляем класс erorr в элементах и очищаем историю
-		$(elem).get(0).reset();//очищаем форму			
+		$(elem).get(0).reset();//очищаем форму	
+		result.text('');		
  	}
  
 	//блокирует скролл 

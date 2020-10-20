@@ -27,7 +27,11 @@ $mail->Subject = 'Заявка с дипломного проекта';
 $mail->Body    = '<b>Пользователь</b> ' .$name . ' оставил заявку <br> <b>Телефон:</b> ' .$phone. '<br> <b>Почта:</b> ' .$email;
 $mail->AltBody = '';
 
+// отправляем
+
 if(!$mail->send()) {
-    echo 'Error';
+    echo 'Ошибка';
+} else {
+     echo 'Заявка отправлена';
 }
 ?>
