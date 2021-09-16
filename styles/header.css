@@ -115,7 +115,7 @@
 
     transition: color .5s ease 0s;
 }
-.menu__link::after /*полса у ссылки*/
+.menu__link::after /*line under link*/
 {
     position: absolute;
     bottom: 0;
@@ -262,7 +262,7 @@
         width: 100%;
 
         transition: transform .5s ease 0s;
-        transform: translate(0, -200%);   /*скрыли меню*/
+        transform: translate(0, -200%);
 
         background-color: #fbfbfb;
     }
@@ -314,10 +314,7 @@
 @media (max-width: 768px)
 {
     /*CONTACTS*/
-    /*    .header__contatcts{
-   padding-right: 20px;
-   }*/
-
+    
     .header__tel
     {
         margin-right: 45px;

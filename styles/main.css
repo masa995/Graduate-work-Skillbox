@@ -374,7 +374,7 @@
 {
     text-align: center;
 
-    flex-shrink: 0; /*определяет фактор сжатия flex-элемента. 0 - элемент не будет сжиматься*/
+    flex-shrink: 0; 
 }
 
 .slider__text
@@ -403,8 +403,8 @@
     background-color: #fff;
     box-shadow: 0 0 10px 0 rgb(0, 0, 0, .08);
 
-    justify-content: center;/*расположение по главной оси*/
-    align-items: center;/*расположение по перечной оси*/
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -704,15 +704,12 @@
         flex-shrink: 0;
     }
 
-
     .paginator__item-active
     {
         outline: none;
         background-color: #ff4e2e;
     }
 
-
-    /*:not(:last-child) - свойство применяется ко всем элементам кроме последнего*/
     .paginator__item:not(:last-child)
     {
         margin-right: 30px;

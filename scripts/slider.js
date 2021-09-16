@@ -1,35 +1,35 @@
 
-  var swiper = new Swiper('.slider', {
-      slidesPerView: 1,
+var swiper = new Swiper('.slider', {
+  slidesPerView: 1,
 
-      breakpoints: {//брейкпоинты
+  breakpoints: {
 
-     992: {
+    992: {
       slidesPerView: 2,
-       spaceBetween: 35
-     },
-
-      1240: {//(больше или равно 1240px)
-        slidesPerView: 3, //число slider__item на экране
-        spaceBetween: 30 //расстояние между слайдами
-        
-      }
+      spaceBetween: 35
     },
 
-    loop: true,//позволяет листать по кругу
-    wrapperClass: 'slider__wrapper',
-    slideClass: 'slider__item',
+    1240: {
+      slidesPerView: 3,
+      spaceBetween: 30
 
-    pagination: {//точки
-      el: '.slider__pagination',// класс контейнира для pagination
-      type: 'bullets', //тип - точки
-      bulletClass: 'paginator__item',
-      bulletActiveClass: 'paginator__item-active',
-      clickable: true //можно листать слайдер нажимая на точки(только для точек)
-    },
+    }
+  },
 
-    navigation: { //кнопки
-      nextEl: '.slider__next-arrow',
-      prevEl: '.slider__previous-arrow',
-      },
-    });
+  loop: true,
+  wrapperClass: 'slider__wrapper',
+  slideClass: 'slider__item',
+
+  pagination: {
+    el: '.slider__pagination',
+    type: 'bullets',
+    bulletClass: 'paginator__item',
+    bulletActiveClass: 'paginator__item-active',
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: '.slider__next-arrow',
+    prevEl: '.slider__previous-arrow',
+  },
+});

@@ -3,42 +3,44 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular');
+  src: local('Roboto'), local('Roboto-Regular'),
        url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'); /* Legacy iOS */
 }
+
 /* roboto-500 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium');
-       url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2');
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'),
        url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff');
 }
+
 /* roboto-700 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
        url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff');
 }
+
 /* roboto-900 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/roboto-v20-latin_cyrillic-900.eot'); /* IE9 Compat Modes */
-  src: local('Roboto Black'), local('Roboto-Black');
+  src: local('Roboto Black'), local('Roboto-Black'),
        url('../fonts/roboto-v20-latin_cyrillic-900.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/roboto-v20-latin_cyrillic-900.woff') format('woff');
 }
 
 html 
 {
-    box-sizing: border-box;/*свойства width и height включают в себя значения полей (padding) и границ (border), но не отступов (margin).*/
+    box-sizing: border-box;
 }
 
 .html_lock {
@@ -50,17 +52,17 @@ html
 *::before,
 *::after
 {
-    box-sizing: inherit; /*Все элементы наследуют значение своего родителя. В данном случае у всех элементов значение box-sizing: border-box*/
+    box-sizing: inherit;
 }
 
 body
 {
-    font-family: "Roboto", sans-serif; /*семейство шрифтов, которое будет использоваться для оформления текста*/
-    font-size: 20px; /*основной размер шрифта*/
-    line-height: normal; /*устанавливает межстирочный интервал*/
+    font-family: "Roboto", sans-serif;
+    font-size: 20px; 
+    line-height: normal;
 
-     min-width: 280px; /*минимальная ширина элемента*/
-     margin: 0; /*убирает поля элемента*/
+     min-width: 280px; 
+     margin: 0; 
 
      color: #1f1f24;
      background-color: #fff;
@@ -72,54 +74,47 @@ body
 
 img 
 {
-    max-width: 100%; /*максимальная ширина изображения 100%*/
+    max-width: 100%; 
 }
 
 a
 {   
     position: relative;
-    text-decoration: none; /*убираем поддчеркивание у ссылок*/
+    text-decoration: none; 
 
-    color: inherit; /*ссылки наследует значение цвета у своего родителя*/
+    color: inherit; 
 }
-
-/*класс, который скрывает содержание*/
 
 .visually-hidden
 {
-    position: absolute !important;/*удаляет элемент из потока документа*/
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); 
+    clip: rect(1px, 1px, 1px, 1px);
 
-    overflow: hidden;/*cкрывает вылезающий за границы контент*/
-    clip: rect(1px 1px 1px 1px); /*Вырезает ту часть контента, которая должна отображаться. Для IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);/*вырезает ту часть контента, которая должна отображаться*/
+    width: 1px; 
+    height: 1px; 
+    padding: 0;
 
-    width: 1px; /*минимально возможный размер ширины (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
-    height: 1px; /*минимально возможный размер высоты (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
-    padding: 0;/*убирает отступы*/
-
-    border: 0;/*убирает границы*/
+    border: 0;
 }
-
-/*блок для контента*/
 
 .fixed-container
 {
-    width: 1170px; /*ширина контенира 1170px*/
-    margin: 0 auto;/*верхние и нижние поля равны 0 а, а левое и правое устанавливаются автоматически*/
+    width: 1170px; 
+    margin: 0 auto;
 }
- 
-/* чтобы влезал слайдер (1230px)*/
+
   @media(max-width: 1240px) {
     .fixed-container {
-      width: 985px;/*ширина контенира 945px*/
+      width: 985px;
       padding-left: 20px;
       padding-right: 20px;
-      margin: 0 auto;/*верхние и нижние поля равны 0 а, а левое и правое устанавливаются автоматически*/
+      margin: 0 auto;
     }
 }
   @media (max-width:  992px){
     .fixed-container {
-      /*ширина контенира 768px*/
       width: 768px;
       padding-left: 20px;
       padding-right: 20px;
@@ -145,15 +140,11 @@ a
     }
   }
 
-    /*@media (max-width: 984px){*/
       @media (max-width: 375px){
       .fixed-container {
-      width: 280px;/*ширина контенира 320px*/
+      width: 280px;
       padding-left: 0;
       padding-right: 0;
-      margin: 0 auto;/*верхние и нижние поля равны 0 а, а левое и правое устанавливаются автоматически*/
+      margin: 0 auto;
     }
   }
-  
-
-}

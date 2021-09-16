@@ -124,7 +124,7 @@
     border: 2px solid #fc557c;
 }
 
-/*Firefox убираем обводку*/
+/*Firefox put away border*/
 .form__text:invalid { 
 box-shadow: none;
 }
